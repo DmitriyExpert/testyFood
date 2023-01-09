@@ -1,6 +1,5 @@
 // Animation btn .intro
 
-
 const btnInIntro = document.querySelectorAll('.btn-text');
 
 for (let item of btnInIntro) {
@@ -38,4 +37,19 @@ const scrollerOnMenu = document.querySelector('.scroller-onmenu');
 
 scrollerOnMenu.onclick = function () {
      document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
+};
+
+// Animation btn-add ~ counter
+
+
+let counter = 0;
+const btnsAdd = document.querySelectorAll('.card-addbag');
+const counterScore = document.querySelector('.header-counter');
+console.log(counterScore)
+for (let item of btnsAdd) {
+     item.addEventListener('click', function (e) {
+          e.preventDefault();
+          counter++
+          counterScore.innerHTML = counter;
+     });
 };
