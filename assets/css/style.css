@@ -42,6 +42,25 @@
      display: flex;
 }
 
+.header__bagbox {
+     position: relative;
+}
+
+.header-counter {
+     position: absolute;
+     bottom: -8px;
+     right: 13px;
+
+
+
+
+     display: inline-block;
+     padding: 3px 5px;
+     border-radius: 50px;
+     color: #fff;
+     background-color: #ff0000;
+}
+
 .header__link:not(:last-child) {
      margin-right: 18px;
 }
@@ -57,6 +76,7 @@
      width: 100%;
      display: flex;
      justify-content: space-between;
+     align-items: center;
 }
 
 .intro__content {
@@ -87,12 +107,14 @@
 }
 
 .btn-text {
+     padding: 21px 0;
      font-weight: 500;
      font-size: 29.3999px;
      line-height: 49px;
      color: #90E051;
      text-align: center;
      transition: all 0.3s ease;
+     border-radius: 20px;
 }
 
 .btn-text:not(:last-child) {
@@ -103,5 +125,212 @@
      padding: 21px 72px;
      background-color: #90E051;
      color: #fff;
-     border-radius: 20px;
+}
+
+
+/* stats */
+
+.section__stats {
+     padding: 40px 0;
+}
+
+.stats__wrapper {
+     max-width: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+.stats__item {
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.stats__item:not(:last-child) {
+     margin-right: 107px;
+}
+
+.stats__inner {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+}
+
+.stats__inner:not(:last-child) {
+     margin-right: 100px;
+}
+
+
+.stats__icon {
+     display: block;
+     width: 150px;
+     height: 150px;
+     margin: 0 auto 16px auto;
+}
+
+.stats__title {
+     font-weight: 600;
+     font-size: 15.9429px;
+     line-height: 21px;
+     margin-bottom: 15px;
+}
+
+.stats__info {
+     font-weight: 500;
+     font-size: 26.5715px;
+     line-height: 32px;
+}
+
+
+/* menu */
+
+
+.section__menu {
+     padding: 64px 0 80px 0;
+     background-image: url('../images/menu/backmenu.png');
+     background-repeat: no-repeat;
+     background-position: left;
+     background-size: auto ;
+}
+
+
+.menu__wrapper {
+     max-width: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: right;
+}
+
+.menu__box {
+     padding: 52px 46px 79px 46px;
+     background-color: #90E051;
+     box-shadow: 0px 17.2708px 107.943px -21.5886px rgba(0, 0, 0, 0.25);
+     border-radius: 69.0833px;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+
+     box-shadow: 0 0 330px 0 rgba(0, 0, 0, .3) inset; 
+}
+
+.menu__row {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     max-width: 100%;
+     width: 100%;
+}
+
+.menu__row:not(:last-child) {
+     margin-bottom: 45px;
+}
+
+
+
+
+
+
+.menu__card {
+     padding: 92px 34px 15px 19px;
+     background: #FFFFFF;
+     box-shadow: 0px 5.84756px 36.5472px -7.30945px rgba(0, 0, 0, 0.25);
+     border-radius: 23.3902px;
+     position: relative;
+}
+
+.menu__card:not(:last-child) {
+     margin-right: 25px;
+}
+
+.menu__card--content {
+     max-width: 176px;
+}
+
+.card--img {
+     position: absolute;
+     top: -35px;
+     left: 50%;
+     transform: translateX(-50%);
+}
+
+.card__title {
+     font-weight: 700;
+     font-size: 16.7873px;
+     line-height: 20px;
+     letter-spacing: -0.025em;
+     margin-bottom: 14px;
+}
+
+.card__subtitle {
+     font-weight: 500;
+     font-size: 14.2047px;
+     line-height: 17px;
+     letter-spacing: -0.025em;
+     margin-bottom: 21px;
+}
+
+.card__stars {
+     display: flex;
+     align-items: center;
+     margin-bottom: 10px;
+}
+
+.stars__icon {
+     margin-right: 5px;
+}
+
+.stars__text {
+     font-weight: 400;
+     font-size: 15.5964px;
+     line-height: 19px;
+     letter-spacing: -0.03em;
+}
+
+.card__price {
+     font-weight: 400;
+     font-size: 16.5955px;
+     line-height: 23px;
+     letter-spacing: -0.03em;
+     color: #90E051;     
+}
+
+.card__price span {
+     font-weight: 700;
+     font-size: 18.5955px;
+}
+
+.card-addbag {
+     position: absolute;
+     bottom: 12px;
+     right: 15px;
+
+
+
+     padding: 4px 8px;
+     border-radius: 50px;
+     color: #fff;
+     font-size: 26px;
+     background: #90E051;
+     box-shadow: 0px 5.59872px 18.1959px -1.39968px rgba(0, 0, 0, 0.25);   
+}
+
+
+.menu--seeall {
+     position: absolute;
+     bottom: 30px;
+     left: 50%;
+     transform: translateX(-50%);
+
+
+     max-width: 265px;
+     width: 100%;
+     padding: 18px 0;
+     border-radius: 17.5029px;
+     text-transform: uppercase;
+     font-weight: 700;
+     font-size: 22.3521px;
+     line-height: 26px;
+     letter-spacing: -0.025em;
+     color: #90E051;
+     background-color: #fff;
 }

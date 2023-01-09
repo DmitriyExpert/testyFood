@@ -1,9 +1,11 @@
+// Animation btn .intro
+
+
 const btnInIntro = document.querySelectorAll('.btn-text');
 
 for (let item of btnInIntro) {
      if (item.classList.contains('btn-active')==true) {
-          const btnActive = item;
-          console.log(btnActive);
+          
      } else {
           const btnNotActive = item;
           btnNotActive.addEventListener('mouseover', function () {
@@ -15,3 +17,25 @@ for (let item of btnInIntro) {
      }
 }
 
+// Scroller on menu link
+
+const smoothLinks = document.querySelectorAll('a[href^="#section__menu"]');
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = smoothLink.getAttribute('href');
+
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+};
+
+// Scroller on menu
+
+const scrollerOnMenu = document.querySelector('.scroller-onmenu');
+
+scrollerOnMenu.onclick = function () {
+     document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
+};
