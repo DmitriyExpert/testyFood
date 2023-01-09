@@ -199,6 +199,7 @@
      width: 100%;
      display: flex;
      justify-content: right;
+     transition: all 0.3s linear; 
 }
 
 .menu__box {
@@ -326,7 +327,7 @@
 
 .menu--seeall {
      position: absolute;
-     bottom: 5px;
+     bottom: 8px;
      left: 50%;
      transform: translateX(-50%);
 
@@ -342,4 +343,10 @@
      letter-spacing: -0.025em;
      color: #90E051;
      background-color: #fff;
+     transition: all 0.3s ease;
+     transform: 0.3s opacity;
+}
+
+.menu--seeall:focus {
+     opacity: 0;
 }

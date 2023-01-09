@@ -39,17 +39,61 @@ scrollerOnMenu.onclick = function () {
      document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
 };
 
-// Animation btn-add ~ counter
+const seeallBtnOnIntro = document.querySelector('#scrollSeeAll');
+seeallBtnOnIntro.onclick = function () {
+     document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
+     seeAllFunc();
+};
 
 
-let counter = 0;
+// See all BTN
+
+
+const menuBox = document.querySelector('.menu__box');
+const seeAllBtn = document.querySelector('#menu--seeall');
+
+const seeAllFunc = function () {
+
+     // disappearance btn and added two object
+
+     menuBox.insertAdjacentHTML('beforeend', menuElementObject.htmlCode);
+     menuBox.insertAdjacentHTML('beforeend', menuElementObject.htmlCode);
+     seeAllBtn.remove();
+
+     // counter score
+     const btnsAdd = document.querySelectorAll('.card-addbag');
+     const counterScore = document.querySelector('.header-counter');
+     let counter = counterScore.innerHTML;
+     for (let item of btnsAdd) {
+     item.addEventListener('click', function (e) {
+          e.preventDefault();
+          counter++
+          counterScore.innerHTML = counter;
+          if (counterScore.innerHTML > 99) {
+               counter--
+               alert('Корзина переполнена');
+          };
+     });
+     };
+};
+
+seeAllBtn.onclick = seeAllFunc;
+
+// Animation btn-add ~ counter not seeall
+
+
 const btnsAdd = document.querySelectorAll('.card-addbag');
 const counterScore = document.querySelector('.header-counter');
-console.log(counterScore)
+let counter = counterScore.innerHTML;
 for (let item of btnsAdd) {
      item.addEventListener('click', function (e) {
           e.preventDefault();
           counter++
           counterScore.innerHTML = counter;
+          if (counterScore.innerHTML > 99) {
+               counter--
+               alert('Корзина переполнена');
+          };
      });
 };
+
