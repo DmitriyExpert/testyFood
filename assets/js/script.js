@@ -16,10 +16,11 @@ for (let item of btnInIntro) {
      }
 }
 
+
 // Scroller on menu link
 
-const smoothLinks = document.querySelectorAll('a[href^="#section__menu"]');
-for (let smoothLink of smoothLinks) {
+const smoothLinksMenu = document.querySelectorAll('a[href^="#section__menu"]');
+for (let smoothLink of smoothLinksMenu) {
     smoothLink.addEventListener('click', function (e) {
         e.preventDefault();
         const id = smoothLink.getAttribute('href');
@@ -42,7 +43,6 @@ scrollerOnMenu.onclick = function () {
 const seeallBtnOnIntro = document.querySelector('#scrollSeeAll');
 seeallBtnOnIntro.onclick = function () {
      document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
-     seeAllFunc();
 };
 
 
@@ -51,14 +51,24 @@ seeallBtnOnIntro.onclick = function () {
 
 const menuBox = document.querySelector('.menu__box');
 const seeAllBtn = document.querySelector('#menu--seeall');
+const backgroundMenu = document.querySelector('.backburger');
+let arrObject = [menuElementObject.htmlCode, menuElementObject.htmlCode];
+
+function addObject() {
+     menuBox.classList.add('_m-auto');
+     for (let item of arrObject) {
+          menuBox.insertAdjacentHTML('beforeend', item)
+     }
+};
 
 const seeAllFunc = function () {
-
      // disappearance btn and added two object
-
-     menuBox.insertAdjacentHTML('beforeend', menuElementObject.htmlCode);
-     menuBox.insertAdjacentHTML('beforeend', menuElementObject.htmlCode);
+     addObject();
      seeAllBtn.remove();
+
+     // Blur
+
+     backgroundMenu.classList.add('_filterStyle');
 
      // counter score
      const btnsAdd = document.querySelectorAll('.card-addbag');
