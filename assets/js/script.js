@@ -3,15 +3,12 @@
 const btnInIntro = document.querySelectorAll('.btn-text');
 
 for (let item of btnInIntro) {
-     if (item.classList.contains('btn-active')==true) {
-          
-     } else {
-          const btnNotActive = item;
-          btnNotActive.addEventListener('mouseover', function () {
+     if (item.classList.contains('btn-active') == false) {
+          item.addEventListener('mouseover', function () {
                this.classList.add('btn-active');
           });
-          btnNotActive.addEventListener('mouseout', function () {
-               this.classList.remove('btn-active');  
+          item.addEventListener('mouseout', function () {
+               this.classList.remove('btn-active');
           });
      }
 }
