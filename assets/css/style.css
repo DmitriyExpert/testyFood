@@ -397,3 +397,152 @@
      line-height: 20px;
      color: #6D6C6C;
 }
+
+
+
+/* customer */
+
+.section__customer {
+     padding: 108px 0px 297px 0;
+}
+
+.customer__wrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 100%;
+     width: 100%;
+}
+
+/* customer content */
+
+/* slide swiper */
+
+.swiper {
+     width: 675px;
+     position: relative;
+}
+
+.slider__title {
+     font-weight: 700;
+     font-size: 60.4566px;
+     line-height: 71px;
+     margin-bottom: 38px;
+     color: #333333;
+     font-feature-settings: 'kern' off;
+}
+
+.slider__subtitle {
+     font-weight: 400;
+     font-size: 20.1522px;
+     line-height: 30px;
+     color: #828282;
+     margin-bottom: 60px;
+}
+
+.slider__img {
+     margin-right: 20px;
+}
+
+.slider__peopleblock {
+     display: flex;
+     align-items: center;
+}
+
+.slider__peopleblock--name {
+     font-weight: 700;
+     font-size: 22.6712px;
+     line-height: 33px;
+     color: #90E051;
+}
+
+.slider__peopleblock--specialty {
+     font-weight: 400;
+     font-size: 18.8392px;
+     line-height: 28px;  
+     color: #828282;
+}
+
+.slider__arrow--wrapper {
+     display: flex;
+     justify-content: end;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+     left: 0;
+     right: 0;
+}
+
+
+
+
+/*customer img content */
+
+.customer__imgcontent {
+     position: relative;
+}
+
+.customer--img {
+     border-radius: 10.6969px;
+}
+
+.customer__card {
+     position: absolute;
+     bottom: -125px;
+     left: -93px;
+     z-index: 10000;
+
+
+     display: inline-block;
+     padding: 40px 38px;
+     background-color: #FFFFFF;
+     box-shadow: 0px 5.03805px 50.3805px rgba(0, 0, 0, 0.1);
+     border-radius: 10.6969px;
+
+}
+
+.customer__card--content {
+     max-width: 472px;
+     position: relative;
+}
+
+.customer__card--title {
+     font-weight: 700;
+     font-size: 25.1902px;
+     line-height: 35px;
+     color: #333;
+}
+
+.customer__card--starsbox {
+     margin: 10px 0px 20px 0;
+}
+
+.customer__card--subtitle {
+     font-weight: 400;
+     font-size: 20.1522px;
+     line-height: 30px;
+     color: #828282;
+}
+
+.fa-star-sett {
+     font-size: larger;
+     cursor: pointer;
+     border: #333;
+     color: red;
+}
+
+.star_active {
+     color: #90E051;
+}
+
+.customer__card--price {
+     font-weight: 700;
+     font-size: 20.1522px;
+     line-height: 30px;
+     color: #4f4f4f;
+     position: absolute;
+     top: 0;
+     right: 0;
+     z-index: 1000;
+}
+
