@@ -153,7 +153,10 @@
                                    <img src="assets/images/menu/search2.svg" alt="search" class="menu__search--icon">
                                    <input type="text" class="menu__input" placeholder="Search">
                               </form>
-                              <div class="menu__box-wrapper">
+                              <button class="menu__seeall--close" type="button">
+                                   <i class="fa-solid fa-xmark"></i>
+                              </button>
+                              <div class="menu__box-wrapper wrapper--notdelete">
                                    
                                    <div class="menu__row">
 
@@ -267,9 +270,7 @@
                     <div class="customer__wrapper">
                          <div class="customer__item">
                               <div class="swiper">
-                                   <!-- Additional required wrapper -->
                                    <div class="swiper-wrapper">
-                                     <!-- Slides -->
                                      <div class="swiper-slide">
                                         <div class="slider__content">
                                              <div class="slider__title">
@@ -334,10 +335,7 @@
                                         </div>
                                      </div>
                                    </div>
-                                   <!-- If we need pagination -->
-                                   
-                                 
-                                   <!-- If we need navigation buttons -->
+     
                                    <div class="swiper-button-prev ds"></div>
                                    <div class="swiper-button-next ds"></div>
                               </div>
@@ -353,12 +351,22 @@
                                              <h3 class="customer__card--title">
                                                   Order now
                                              </h3>
-                                             <div class="customer__card--starsbox">
-                                                  <i class="fa-solid fa-star fa-star-sett fa-search-js star_active"></i>
-                                                  <i class="fa-solid fa-star fa-star-sett fa-search-js"></i>
-                                                  <i class="fa-solid fa-star fa-star-sett fa-search-js"></i>
-                                                  <i class="fa-solid fa-star fa-star-sett fa-search-js"></i>
-                                                  <i class="fa-solid fa-star fa-star-sett fa-search-js"></i>
+                                             <div class="customer__rating rating rating__set">
+                                                  <div class="rating__body">
+                                                       <div class="rating__active">
+
+                                                       </div>
+                                                       <div class="rating__items">
+                                                            <input type="radio" class="rating__item" value="1" name="rating">
+                                                            <input type="radio" class="rating__item" value="2" name="rating">
+                                                            <input type="radio" class="rating__item" value="3" name="rating">
+                                                            <input type="radio" class="rating__item" value="4" name="rating">
+                                                            <input type="radio" class="rating__item" value="5" name="rating">
+                                                       </div>
+                                                  </div>
+                                                  <div class="rating__value">
+                                                       3.6
+                                                  </div>
                                              </div>
                                              <p class="customer__card--subtitle">
                                                   Lorem ipsum dolor sit amet, consectetur elit. Quisque diam pellentesque bibendum fringilla bibendum. Urna, elit augue urna,

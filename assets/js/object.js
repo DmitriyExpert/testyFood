@@ -99,3 +99,10 @@ const menuElementObject = {
                               </div>
      `
 }
+
+
+const btnSeeAll = {
+     btnHTML: `<button type="button" class="menu--seeall isDelete" id="menu--seeall">
+     SEE ALL
+</button>` 
+};

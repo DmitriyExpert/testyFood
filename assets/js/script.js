@@ -47,15 +47,33 @@ seeallBtnOnIntro.onclick = function () {
 
 
 const menuBox = document.querySelector('.menu__box');
-const seeAllBtn = document.querySelector('#menu--seeall');
+const seeAllBtn = document.querySelector('.menu--seeall');
 const backgroundMenu = document.querySelector('.backburger');
+const deleteObjectBtn = document.querySelector('.menu__seeall--close');
 let arrObject = [menuElementObject.htmlCode, menuElementObject.htmlCode];
+
+function deleteObject() {
+     deleteObjectBtn.onclick = function () {
+          const wrappersInner = document.querySelectorAll('.menu__box-wrapper');
+          for (let item of wrappersInner) {
+               if (item.classList.contains('wrapper--notdelete')) {
+                    
+               } else {
+                    menuBox.classList.remove('_m-auto');
+                    item.remove();
+                    menuBox.insertAdjacentHTML('beforeend', btnSeeAll.btnHTML);
+                    window.location.reload()
+               }
+          };
+     };
+};
 
 function addObject() {
      menuBox.classList.add('_m-auto');
      for (let item of arrObject) {
           menuBox.insertAdjacentHTML('beforeend', item)
      }
+
 };
 
 
@@ -64,6 +82,7 @@ const seeAllFunc = function () {
      // disappearance btn and added two object
      addObject();
      seeAllBtn.remove();
+     deleteObject();
 
      // Blur
 
@@ -131,7 +150,58 @@ const swiper = new Swiper('.swiper', {
      scrollbar: {
        el: '.swiper-scrollbar',
      },
-   });
+});
+   
 
 
+// animation fa-stars
 
+
+const ratings = document.querySelectorAll('.rating');
+if (ratings.length > 0) {
+     initRatings();
+};
+
+function initRatings() {
+     let ratingActive, ratingValue;
+     for (let index = 0; index < ratings.length; index++) {
+          const rating = ratings[index];
+          initRating(rating);
+     };
+     function initRating(rating) {
+          initRatingVars(rating);
+          setRatingActiveWidth();
+          if (rating.classList.contains('rating__set')) {
+               setRating(rating);
+          };
+     };
+
+     function initRatingVars(rating) {
+          ratingActive = rating.querySelector('.rating__active');
+          ratingValue = rating.querySelector('.rating__value');
+     }
+
+     function setRatingActiveWidth(index = ratingValue.innerHTML) {
+          const ratingActiveWidth = index / 0.05;
+          ratingActive.style.width = `${ratingActiveWidth}%`;
+     };
+     
+     function setRating(rating) {
+          const ratingItems = rating.querySelectorAll('.rating__item');
+          for (let index = 0; index < ratingItems.length; index++) {
+               const ratingItem = ratingItems[index];
+               ratingItem.addEventListener('mouseenter', function (e) {
+                    initRatingVars(rating);
+                    setRatingActiveWidth(ratingItem.value);  
+               });
+               ratingItem.addEventListener('mouseleave', function (e) {
+                    setRatingActiveWidth();
+               });
+               ratingItem.addEventListener('click', function (e) {
+                    initRatingVars(rating);
+                    ratingValue.innerHTML = index + 1;
+                    setRatingActiveWidth();
+               });
+          };
+     };
+};
