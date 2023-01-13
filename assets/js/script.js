@@ -52,9 +52,14 @@ const backgroundMenu = document.querySelector('.backburger');
 const deleteObjectBtn = document.querySelector('.menu__seeall--close');
 let arrObject = [menuElementObject.htmlCode, menuElementObject.htmlCode];
 
+{
+     deleteObjectBtn.classList.add('menu--seeall-close_display');
+}
+
 function deleteObject() {
      deleteObjectBtn.onclick = function () {
           const wrappersInner = document.querySelectorAll('.menu__box-wrapper');
+          
           for (let item of wrappersInner) {
                if (item.classList.contains('wrapper--notdelete')) {
                     
@@ -62,6 +67,7 @@ function deleteObject() {
                     menuBox.classList.remove('_m-auto');
                     item.remove();
                     menuBox.insertAdjacentHTML('beforeend', btnSeeAll.btnHTML);
+                    deleteObjectBtn.classList.add('menu--seeall-close_display');
                     window.location.reload()
                }
           };
@@ -73,7 +79,7 @@ function addObject() {
      for (let item of arrObject) {
           menuBox.insertAdjacentHTML('beforeend', item)
      }
-
+     deleteObjectBtn.classList.remove('menu--seeall-close_display');
 };
 
 
