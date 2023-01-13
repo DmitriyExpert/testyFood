@@ -1,3 +1,14 @@
+// lazy loading
+
+const linksOnSite = document.querySelectorAll('img');
+
+for (let item of linksOnSite) {
+     item.setAttribute('loading', 'lazy');
+};
+
+
+
+
 // Animation btn .intro
 
 const btnInIntro = document.querySelectorAll('.btn-text');
