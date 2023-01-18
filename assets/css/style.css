@@ -818,11 +818,17 @@
 
 .footer__form {
      border: 1px solid #90E051;
+     border-radius: 5px;
      display: flex;
      align-items: center;
      max-width: 560px;
      width: 100%;
 }
+
+.footer__form--borderRed{
+     border: 1px solid #ff0000;
+}
+
 
 .footer__inputemail {
      padding: 16px;
@@ -836,7 +842,7 @@
      color: #90E051;
 }
 
-.footer__btnaction {
+.footer__btnaction-inactive {
      padding: 16px;
      width: 30%;
      text-align: center;
@@ -844,6 +850,19 @@
      font-size: 16px;
      line-height: 24px;
      color: #fff;
+     background-color: #39740c;
+     cursor: not-allowed;
+}
+
+.footer__btnaction-active {
+     padding: 16px;
+     width: 30%;
+     text-align: center;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 24px;
+     color: #fff;
+     cursor: pointer;
      background-color: #90E051;
 }
 
@@ -920,8 +939,21 @@
      list-style: none;
 }
 
+
 .footer__nav:not(:last-child) {
      margin-right: 60px;
+}
+
+.contact__b-none {
+     border: none;
+     transition: all .3s ease;
+}
+
+.contact__nav--border{
+     padding: 5px;
+     border: solid 2px #fff;
+     border-radius: 3px;
+     transition: all .3s ease;
 }
 
 .footer__nav--item {

@@ -30,7 +30,7 @@ for (let item of btnInIntro) {
 // Scroller on aboutus link
 
 const smoothLinksAboutUs = document.querySelectorAll('a[href^="#scrollFrom--About"]');
-for (smoothLink of smoothLinksAboutUs) {
+for (let smoothLink of smoothLinksAboutUs) {
      smoothLink.addEventListener('click', function (e) {
           e.preventDefault();
           const id = smoothLink.getAttribute('href');
@@ -240,5 +240,70 @@ function initRatings() {
 $('.single-item').slick();
 
 
-// Animation SocialBlock
+// Animation form
+
+const footerForm = document.querySelector('.footer__form');
+const footerFormInput = document.querySelector('.footer__inputemail');
+const footerFormBtn = document.querySelector('.footer__btnaction--search');
+
+footerFormInput.addEventListener('input', function () {
+     if (footerForm.classList.contains('footer__form--borderRed') == true) {
+          footerForm.classList.remove('footer__form--borderRed');     
+     };
+
+     if (footerFormInput.value == '') {
+          
+     } else {
+          footerFormBtn.classList.remove('footer__btnaction-inactive');    
+          footerFormBtn.classList.add('footer__btnaction-active');
+     }
+
+     footerFormBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (footerFormBtn.classList.contains('footer__btnaction-inactive') == true) {
+               
+          } else {
+               if (footerFormInput.value == '') {
+                    alert('Write an email in the input field')
+                    footerForm.classList.add('footer__form--borderRed');
+                    footerFormBtn.classList.remove('footer__btnaction-active');
+                    footerFormBtn.classList.add('footer__btnaction-inactive');
+               }
+               if (footerFormInput.value != '') {
+                    alert('Successfully. Your application has been sent');
+                    footerFormInput.value = '';
+                    footerFormBtn.classList.remove('footer__btnaction-active');  
+                    footerFormBtn.classList.add('footer__btnaction-inactive');
+               };
+          };
+     });
+
+
+});
+
+
+
+
+
+
+
+// Animation Contact Block
+
+const contactFooterBTN = document.querySelector('.footer__contact--btn');
+const contactBlock = document.querySelector('.contact__block--serch');
+
+contactFooterBTN.addEventListener('click', function (e) {
+     e.preventDefault();
+     const contactClassCheck = contactBlock.classList.contains('contact__nav--border');
+     if (contactClassCheck == false) {
+          contactBlock.classList.remove('contact__b-none');
+          contactBlock.classList.add('contact__nav--border');
+     } else {
+          
+     }
+     setTimeout(function () {
+          contactBlock.classList.add('contact__b-none');
+          contactBlock.classList.remove('contact__nav--border');
+     }, 1000);
+});
 
