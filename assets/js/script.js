@@ -21,8 +21,42 @@ for (let item of btnInIntro) {
           item.addEventListener('mouseout', function () {
                this.classList.remove('btn-active');
           });
-     }
-}
+     };
+};
+
+//Scrollers
+
+
+// Scroller on aboutus link
+
+const smoothLinksAboutUs = document.querySelectorAll('a[href^="#scrollFrom--About"]');
+for (smoothLink of smoothLinksAboutUs) {
+     smoothLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     });
+};
+
+
+// Scroller on home link
+
+const smoothLinksHome = document.querySelectorAll('a[href^="#section__intro"]');
+for (smoothLink of smoothLinksHome) {
+     smoothLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     });
+};
+
+
 
 
 // Scroller on menu link
@@ -204,3 +238,7 @@ function initRatings() {
 
 
 $('.single-item').slick();
+
+
+// Animation SocialBlock
+
