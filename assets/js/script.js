@@ -318,9 +318,13 @@ const burgerMenuClose = document.querySelector('.button--closeBurgerMenu');
 
 burgerMenuAction.addEventListener('click', function () {
      burgerMenuOpen.style.width = '100%';
-     burgerMenuNav.style.display = 'block';
+     setTimeout(function () {
+          burgerMenuNav.style.display = 'block';  
+     }, 100);
      burgerMenuClose.addEventListener('click', function () {
           burgerMenuOpen.style.width = '0%';
-          burgerMenuNav.style.display = 'none';
+          setTimeout(function () {
+               burgerMenuNav.style.display = 'none';
+          }, 208);
      });
 });
