@@ -27,14 +27,14 @@
 
      margin: 0 auto 0 0;
      text-align: center;
+     cursor: pointer;
 }
 
 .burger__menu--item {
-     max-width: 50px;
+     max-width: 30px;
      width: 100%;
      height: 5px;
      background-color: #000;
-     border: none;
 }
 
 .burger__menu--item:not(:last-child) {
@@ -1074,7 +1074,35 @@
  /* 575.98px */
 
  @media (max-width: 575.98px) { 
+     .burger__menu--action {
+          max-width: 80px;
+          width: 100%;
+     }
 
+     .burger__menu--item {
+          max-width: 100%;
+          height: 10px;
+     }
+
+     .burger__menu--item:not(:last-child) {
+          margin-bottom: 14px;
+     }
+
+     .header__icon {
+          max-width: 200%;
+          width: 200%;
+     }
+
+     .header__link:not(:last-child) {
+          margin-right: 34px;
+     }
+
+     .header-counter {
+          bottom: -20px;
+          right: -6px;
+          padding: 6px 12px;
+          font-size: 34px;
+      }
      
   }
 
