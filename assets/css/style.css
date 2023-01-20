@@ -16,6 +16,18 @@
      display: none;
 }
 
+.d-block {
+     display: block;
+}
+
+.burger__menu--openView {
+     display: none;
+}
+
+.burger__menu--action {
+     display: none !important;
+}
+
 
 /* burger__menu */
 
@@ -39,6 +51,15 @@
 
 .burger__menu--item:not(:last-child) {
      margin-bottom: 10px;
+}
+
+.burger__menu--openView {
+     position: absolute;
+     max-width: 100%;
+     width: 100%;
+     height: 100%;
+     background-color: #333;
+     z-index: 100000;
 }
 
 
@@ -263,6 +284,8 @@
 }
 
 .menu__box-wrapper {
+     max-width: 100%;
+     width: 100%;
      margin-top: 78px;
      position: relative;
      display: flex;
@@ -657,6 +680,8 @@
 
 .slider__arrow--wrapper {
      display: flex;
+     max-width: 100%;
+     width: 100%;
 }
 
 .fa-arrow-sett {
@@ -1075,9 +1100,10 @@
 
  @media (max-width: 575.98px) { 
      .burger__menu--action {
-          max-width: 80px;
+          display: flex !important;
+          max-width: 65px;
           width: 100%;
-     }
+      }
 
      .burger__menu--item {
           max-width: 100%;
@@ -1089,20 +1115,74 @@
      }
 
      .header__icon {
-          max-width: 200%;
-          width: 200%;
-     }
+          max-width: 150%;
+          width: 150%;
+      }
 
      .header__link:not(:last-child) {
           margin-right: 34px;
      }
 
      .header-counter {
-          bottom: -20px;
-          right: -6px;
-          padding: 6px 12px;
-          font-size: 34px;
+          bottom: -11px;
+          right: 10px;
+          padding: 3px 8px;
+          font-size: 27px;
       }
+
+     /* .burgerOpenWidthNone {
+          max-width: 0%;
+          width: 100%;
+     } */
+
+     .burger__menu--openView {
+          position: fixed;
+          display: block;
+          max-width: 100%;
+          width: 0%;
+          transition: width .5s ease;
+     }
+
+     
+
+     .header__nav {
+          display: none;
+          transition: all 1s ease;
+     }
+
+     .hmenu__item {
+          color: #fff;
+     }
+
+     .header__menu  {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 50px 0px 0px 50px;
+     }
+
+     .header__wrapper .header__nav {
+          display: none; 
+     }
+
+     .hmenu__item:not(:last-child) {
+          margin-right: 0px;
+          margin-bottom: 20px;
+     }
+
+     .hmenu__item {
+          color: #fff;
+     }
+     
+
+     .fa-circle--sett {
+          color: #fff;
+          font-size: 50px;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          cursor: pointer;
+     }
      
   }
 

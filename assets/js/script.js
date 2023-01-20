@@ -307,3 +307,20 @@ contactFooterBTN.addEventListener('click', function (e) {
      }, 1000);
 });
 
+
+
+// animation burger-menu
+
+const burgerMenuAction = document.querySelector('.burger__menu--action');
+const burgerMenuOpen = document.querySelector('.burger__menu--openView');
+const burgerMenuNav = document.querySelector('.burger__menu--openView .header__nav');
+const burgerMenuClose = document.querySelector('.button--closeBurgerMenu');
+
+burgerMenuAction.addEventListener('click', function () {
+     burgerMenuOpen.style.width = '100%';
+     burgerMenuNav.style.display = 'block';
+     burgerMenuClose.addEventListener('click', function () {
+          burgerMenuOpen.style.width = '0%';
+          burgerMenuNav.style.display = 'none';
+     });
+});

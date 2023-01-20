@@ -3,7 +3,7 @@
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
      <link rel="stylesheet" href="assets/css/settings.css">
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,39 @@
 </head>
 <body>
      <div class="wrapper">
+          <div class="burger__menu--openView">
+               <nav class="header__nav">
+                    <ul class="header__menu hmenu">
+                         <li class="hmenu__item">
+                              <a href="#section__intro">
+                                   Home
+                              </a>
+                         </li>
+                         <li class="hmenu__item">
+                              <a href="#section__menu" class="scroller-onmenulink">
+                                   Menu
+                              </a>
+                         </li>
+                         <li class="hmenu__item">
+                              <a href="#scrollFrom--About">
+                                  About 
+                              </a>
+                         </li>
+                         <li class="hmenu__item">
+                              <a href="#">
+                                  Shop
+                              </a>
+                         </li>
+                    </ul>
+               </nav>
+               <button type="button" class="button--closeBurgerMenu">
+                    <i class="fa-regular fa-circle-xmark fa-circle--sett"></i>
+               </button>
+          </div>
           <header class="header" id="header">
                <div class="container">
                     <div class="header__wrapper">
-                         <nav class="header__nav d-none">
+                         <nav class="header__nav">
                               <ul class="header__menu hmenu">
                                    <li class="hmenu__item">
                                         <a href="#section__intro">
@@ -45,7 +74,7 @@
                               </ul>
                          </nav>
 
-                         <button type="button" name="btn" class="burger__menu--action">
+                         <button type="button" name="btn" class= "burger__menu--action">
                               <div class="burger__menu--item"></div>
                               <div class="burger__menu--item"></div>
                               <div class="burger__menu--item"></div>
