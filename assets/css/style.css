@@ -1271,6 +1271,12 @@
           align-items: center;
           flex-wrap: wrap;
       }
+
+      .menu__card {
+          padding-right: 20px;
+      }
+
+
      .menu__card:not(:last-child) {
           margin-right: 0px;
           margin-bottom: 50px;
@@ -1293,19 +1299,114 @@
           top: 80px;
       }
 
+      .card__title {
+          text-align: center;
+          font-size: 19px;
+      }
+
+      .card__subtitle {
+          text-align: center;
+          font-size: 16px;
+      }
+
+      .stars__text {
+          font-size: 16px;
+      }
+
 
      /* customer */
 
      .section__customer {
-          display: none;
+          padding: 0px 0px 60px 0;
      }
+
+     .customer__wrapper {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .customer__slider {
+          max-width: 440px;
+          width: 100%;
+      }
+
+      .customer__item--mt-resp {
+          margin-top: 100px;
+      }
+
+      .customer__card {
+          bottom: -130px;
+          left: 0;
+      }
+
+      .customer__imgcontent {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .customer__card--title {
+          margin-bottom: 10px;
+      }
+
+      .customer__rating  {
+          margin-bottom: 10px;
+      }
+
+      .customer__card {
+          position: relative;
+          bottom: 0;
+          margin-top: 20px;
+      }
+
+      .slide {
+          max-width: 100%;
+          width: 100%;
+      }
+
+      .slider__content {
+          max-width: 320px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+      }
+
+      .slider__title {
+          text-align: center;
+      }
+
+      .slider__subtitle {
+          text-align: justify;
+      }
+
+      .slider__peopleblock {
+          margin: 0 auto;
+          align-items: center;
+          text-align: center;
+      }
+
+      .slick-next {
+          right: 150px !important;
+      }
+
+      .slick-prev {
+          left: 150px !important;
+      }
+
+      .slick-arrow::before {
+          padding: 10px !important;
+      }
+
+      .slick-prev, .slick-next {
+          height: 0 !important;
+      }
 
 
      /*Mobile*/
 
 
      .section__mobile {
-          display: none;
+          
      }
 
      /* footer */
