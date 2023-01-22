@@ -206,6 +206,7 @@
      width: 100%;
      display: flex;
      justify-content: center;
+     flex-wrap: wrap;
 }
 
 .stats__item {
@@ -1130,10 +1131,7 @@
           font-size: 27px;
       }
 
-     /* .burgerOpenWidthNone {
-          max-width: 0%;
-          width: 100%;
-     } */
+     
 
      .burger__menu--openView {
           position: fixed;
@@ -1183,8 +1181,140 @@
           right: 20px;
           cursor: pointer;
      }
+
+
+     /* intro */ 
+
+     .intro__wrapper {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .intro__item:not(:last-child) {
+          margin-bottom: 30px;
+     }
+
+     .intro__content {
+          max-width: 100%;
+          width: 100%;
+          text-align: center;
+          align-items: center;
+     }
+
+     .intro__title {
+          font-weight: 700;
+          font-size: 56px;
+          line-height: 80px;
+          margin-bottom: 30px;
+          width: 100%;
+      }
+
+      .intro__btnbox {
+          justify-content: center;
+          margin-top: 30px;
+      }
+
+
+
+     /* section__stats */
+
+     .section__stats {
+          padding: 30px 0;
+     }
+
+     .stats__wrapper {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .stats__item {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .stats__item:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 25px;
+     }
+
+     .stats__inner:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 25px;
+     }
+
+
+     /* Menu */
+
+     .section__menu {
+          padding: 30px 0 80px 0;
+     }
+
+     .menu__box-wrapper:not(:last-child) {
+          margin-right: 0;
+     }
+
+     .menu__box {
+          max-width: 90%;
+          width: 100%;
+          margin: 0 auto;
+          padding: 52px 46px 110px 46px;
+
+          display: flex;
+          flex-direction: column;
+     }
+
+     .menu__row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+     .menu__card:not(:last-child) {
+          margin-right: 0px;
+          margin-bottom: 50px;
+     }
+
+     .menu--seeall {
+          bottom: 28px;
+          max-width: 80%;
+          width: 100%;
+     }
+
+     .menu__search {
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+     }
+
+     .menu__seeall--close {
+          left: 87%;
+          top: 80px;
+      }
+
+
+     /* customer */
+
+     .section__customer {
+          display: none;
+     }
+
+
+     /*Mobile*/
+
+
+     .section__mobile {
+          display: none;
+     }
+
+     /* footer */
+
+     .footer {
+          display: none;
+     }
      
-  }
+}
 
 
 
