@@ -370,6 +370,17 @@ burgerMenuAction.addEventListener('click', function () {
 
 
 
-// Smooth opacity for element
+// Animation burger menu close
+
+const burgerMenuItem = document.querySelectorAll('.burger__menu--openView .header__nav .hmenu .hmenu__item a');
+
+for (let scrollLinks of burgerMenuItem) {
+     scrollLinks.addEventListener('click', function () {
+          burgerMenuOpen.style.width = '0%';
+          burgerMenuNav.style.display = 'none';
+     });
+};
+
+
 
 

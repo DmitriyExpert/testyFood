@@ -1117,6 +1117,8 @@
  @media (max-width: 575.98px) { 
      .burger__menu--action {
           display: flex !important;
+          flex-direction: column;
+          margin: 0 auto 0 0;
           max-width: 65px;
           width: 100%;
       }
