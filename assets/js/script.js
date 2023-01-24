@@ -74,6 +74,7 @@ for (let smoothLink of smoothLinksMenu) {
     });
 };
 
+
 // Scroller on menu
 
 const scrollerOnMenu = document.querySelector('.scroller-onmenu');
@@ -86,6 +87,43 @@ const seeallBtnOnIntro = document.querySelector('#scrollSeeAll');
 seeallBtnOnIntro.onclick = function () {
      document.querySelector('#section__menu').scrollIntoView({ behavior: "smooth" });
 };
+
+
+// Scroller on mobile
+
+const smoothLinksMobile = document.querySelectorAll('a[href^="#section__mobile"]');
+for (let smoothLink of smoothLinksMobile) {
+     smoothLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     }); 
+};
+
+
+
+// Scroller on team
+
+
+const smoothLinksTeam = document.querySelectorAll('a[href^="#section__customer"]');
+
+for (let smoothLink of smoothLinksTeam) {
+     smoothLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = smoothLink.getAttribute('href');
+          document.querySelector(id).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          });
+     });
+};
+
+
+
+
 
 
 // See all BTN
@@ -328,3 +366,10 @@ burgerMenuAction.addEventListener('click', function () {
           }, 208);
      });
 });
+
+
+
+
+// Smooth opacity for element
+
+

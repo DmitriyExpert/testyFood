@@ -29,6 +29,19 @@
 }
 
 
+/*Animation Opacity*/
+
+.opacity-scriptActive {
+     opacity: 0;
+     transform: translateX(-100%);
+}
+
+.animation__opacityScript {
+     opacity: 1;
+     transform: translateX(0%);
+};
+
+
 /* burger__menu */
 
 .burger__menu--action {
