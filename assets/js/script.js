@@ -382,5 +382,28 @@ for (let scrollLinks of burgerMenuItem) {
 };
 
 
+// Modal basket animation
+const bodySite = document.querySelector('body')
+
+const bagSearch = document.querySelector('.bagSearchJS');
+const modalBasket = document.querySelector('.basket--modalWindow');
+const modalContent = document.querySelector('.basketModal__content');
+
+const modalCloseBTN = document.querySelector('.basketModal--close')
+
+bagSearch.addEventListener('click', function (e) {
+     e.preventDefault();
+     modalBasket.classList.remove('d-none');
+     modalContent.classList.add('mod-cont-top');
+     bodySite.style.overflow = 'hidden';
+     modalCloseBTN.addEventListener('click', function () {
+          modalBasket.classList.add('d-none');
+          bodySite.style.overflow = '';
+     });
+});
+
+
+
+
 
 
